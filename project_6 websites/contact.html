@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel website </title>
+    <script src="app.js"></script>
+    <style>
+        /* ######main body###### */
+        .contact {
+            max-width: 1200px;
+            width: 90%;
+            height: 750px;       
+             background: rgb(226, 225, 225); 
+            border: 1px solid rgb(242, 229, 209);
+            margin: auto;
+            /* box-shadow: 8px 8px 10px rgb(189, 184, 184); */
+
+        }
+
+        /* #######for subdivision######### */
+        .form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .part {
+            width: 580px;
+            height: 500px;
+            /* border: 1px solid black; */
+        }
+
+        /* ######## for subdivision######## */
+        .part1 {
+            width: 600px;
+            margin-left: 30px;
+        }
+
+        .part2 {
+            width: 500px;
+            margin-left: 30px;
+            transform: translateX(200%);
+            animation: photo-animation 1s ease-in-out forwards;
+
+        }
+
+        .company {
+            width: 600px;
+            height: 500px;
+            transform: translateX(-200%);
+            animation: photo-animation 1s ease-in-out forwards;
+
+        }
+
+        span {
+            color: rgb(240, 14, 184);
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        label {
+            margin-left: 50px;
+            font-size: 20px;
+        }
+
+        .text {
+            margin-left: 50px;
+            width: 444px;
+            height: 30px;
+            background: rgb(226, 225, 225);
+            border-top: hidden;
+            border-left: hidden;
+            border-right: hidden;
+            margin: 10px 50px;
+            transition: all 0.5s ease-in;
+
+        }
+
+        .text:hover {
+
+            color: rgb(26, 25, 25);
+            background: rgb(160, 238, 238);
+        }
+
+        textarea {
+            margin-left: 50px;
+        }
+
+        .btn {
+            margin-left: 50px;
+            width: 448px;
+            margin-top: 5px;
+            height: 30px;
+            opacity: 0.7;
+            cursor: pointer;
+            background: rgb(6, 198, 211);
+            transition: all 0.5s ease-in;
+
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        /* ####### for bottom##### */
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .parts {
+            width: 330px;
+            height: 160px;
+            margin: 40px 30px;
+             background: rgb(205, 205, 206);
+            transition: all 0.5s ease-in;
+
+
+        }
+
+        .parts:hover {
+            border: 1px solid rgb(15, 171, 249);
+            box-shadow: 6px 6px 10px rgb(8, 172, 242);
+
+        }
+        
+        
+        @keyframes photo-animation{
+            100%{
+                transform:translate(0) ;
+            }
+        }
+
+        .location {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-top: 10px;
+            margin-left: 42%;
+            cursor: pointer;
+
+        }
+
+        p {
+            margin-left: 40%;
+            margin-top: 2px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(54, 54, 54);
+        }
+
+        .address {
+            margin-left: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(39, 38, 38);
+        }
+
+        li {
+            margin-left: 90px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(36, 37, 37);
+        }
+
+        .email {
+            margin-left: 35px;
+            color: rgb(30, 30, 30);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+     .hour{
+        margin-left: 139px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(59, 59, 59);
+    }
+    .amit{
+        margin-left: 100px;
+        margin-bottom: 5px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(41, 41, 41);
+    }
+    </style>
+</head>
+
+<body onscroll="changeColor()" >
+    <div class="contact" >
+        <div class="form">
+            <div class="part part1">
+                <img src="./img/company2.jpeg" alt="" class="company">
+            </div>
+            <!-- ######form#### -->
+            <div class="part part2">
+                <h2><u> CONTACT WITH<span> ME</u></span></h2>
+                <label for="Name">First name</label><br>
+                <input type="text" placeholder="please enter your first name..." class="text" r><br>
+                <label for="Name">Last name</label><br>
+                <input type="text" placeholder="please enter your last name..." class="text"><br>
+                <label for="Email">Email </label><br>
+                <input type="email" placeholder="please enter your email..." class="text"><br>
+                <label for="number">Mobile number</label><br>
+                <input type="text" placeholder="please enter your mobile number.." class="text"><br>
+                <label for="textarea">Message</label><br>
+                <textarea name="textarea" id="" cols="58" rows="4"></textarea><br>
+                <button type="submit" class="btn">Register</button>
+
+            </div>
+        </div>
+        <!-- for bottom -->
+        <div class="bottom">
+            <div class=" parts part3">
+                <img src="./img/location2.png" alt="" class="location">
+                <p><u>Location</u> </p>
+                <p class="address">Kolar road,police station nayapura,bhopal,madhyapradesh</p>
+            </div>
+            <div class=" parts part4">
+                <img src="./img/call.png" alt="" class="location">
+                <p><u>Contact me</u> </p>
+                <ul>
+                    <li>620-7363-158</li>
+                    <li>705-0842-884</li>
+                    <p class="email"> amitrifresh9495@gmail.com </p>
+                </ul>
+            </div>
+            <div class=" parts part5">
+                <img src="./img/clock3.jpg" alt="" class="location">
+                <p class="hour"><u>Hours</u> </p>
+                    <p class="amit"> customer available </p>
+                <p class="email">Monday-saturday,9:00 AM to 6:00 PM</p>
+                
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
